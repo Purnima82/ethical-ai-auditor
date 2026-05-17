@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #12121a;
+  --surface2: #1a1a26;
+  --border: rgba(120, 120, 200, 0.15);
+  --accent: #7c6df0;
+  --accent2: #e05b8b;
+  --accent3: #3ecfb0;
+  --amber: #f5a623;
+  --text: #e8e8f0;
+  --muted: #888898;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: rgba(120,120,200,0.3); border-radius: 3px; }
+
+.mono { font-family: 'Space Mono', monospace; }
+
+/* Animated gradient border for active cards */
+@keyframes borderPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+.border-pulse { animation: borderPulse 2s ease-in-out infinite; }
+
+/* Score bar fill animation */
+@keyframes fillBar {
+  from { width: 0; }
+}
+.bar-animate { animation: fillBar 0.8s ease forwards; }
+
+/* Fade-in for result panels */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.8s linear infinite; }
