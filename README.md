@@ -65,12 +65,12 @@ ethical-ai-auditor/
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ethical-ai-auditor.git
+git clone https://github.com/Poornima_singh/ethical-ai-auditor.git
 cd ethical-ai-auditor
 
 # Backend
 python -m venv venv
-source venv/bin/activate          # Windows: venv\Scripts\activate
+source venv\Scripts\activate          
 pip install -r requirements.txt
 
 # Frontend
